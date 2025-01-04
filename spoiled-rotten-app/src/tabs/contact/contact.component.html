@@ -1,0 +1,13 @@
+<h1>Contact Us</h1>
+<p>Email: contact&#64;ourbusiness.com</p>
+<p>Phone: +1 (555) 555-5555</p>
+
+<form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" ngModel required>
+
+  <label for="message">Your Message:</label>
+  <textarea id="message" name="message" ngModel required></textarea>
+
+  <button type="submit" [disabled]="!contactForm.valid">Send</button>
+</form>
