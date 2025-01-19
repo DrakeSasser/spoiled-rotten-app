@@ -10,4 +10,15 @@ import { HomeTabContainerComponent } from "../tabs/home-tab-container/home-tab-c
 })
 export class AppComponent {
   title = 'spoiled-rotten-app';
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

@@ -1,1 +1,293 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --dark-vanilla: #dec0ae;
+    --parrot-pink: #d4949d;
+    --liberty: #5c63a4;
+    --lavender-purple: #8b7fac;
+    --cadet-blue: #acb0cc;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: var(--liberty);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-vanilla);
+  }
+  
+  a {
+    color: var(--liberty);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--parrot-pink);
+  }
+  
+  section {
+    padding: 100px 20px;
+    scroll-margin-top: 80px; /* Adjust for fixed navbar height */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--cadet-blue);
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links button {
+    background: none;
+    border: none;
+    color: var(--dark-vanilla);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-links button:hover {
+    background-color: var(--lavender-purple);
+    border-radius: 5px;
+    color: var(--liberty);
+  }
+  
+  .content {
+    margin-top: 60px; /* Account for fixed navbar height */
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--dark-vanilla);
+    color: var(--liberty);
+  }
+  
+  section:nth-child(even) {
+    background: var(--parrot-pink);
+  }
+  
+  section:nth-child(odd) {
+    background: var(--cadet-blue);
+  }
+
+  .button {
+    padding: 15px 30px;
+    background-color: var(--liberty);
+    color: var(--dark-vanilla);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--lavender-purple);
+    transform: scale(1.05);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .about-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+  }
+  
+  .about-image-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .about-image {
+      width: 90%; /* Reduce the image size on smaller screens */
+    }
+    .store-hours ul {
+        font-size: 0.9rem;
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+    
+      .store-hours li {
+        flex-direction: column;
+        text-align: left;
+      }
+    
+      .store-hours li span {
+        display: block;
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr; /* Stack team members vertically on smaller screens */
+      }
+    
+      .team-member {
+        max-width: 90%;
+      }
+  }
+
+  .store-hours {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .store-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .store-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .store-hours li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .store-hours li span {
+    font-weight: bold;
+    color: #5C634A; /* Optional: Matches your provided palette */
+  }
+  
+  .store-hours li:last-child {
+    border-bottom: none;
+  }
+  
+  .store-hours li span:first-child {
+    color: var(--liberty); /* Optional: Another color from your palette */
+  }
+
+  .book-now-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: var(--dark-vanilla);
+    background-color: var(--lavender-purple); /* Use a palette color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now-btn:hover {
+    background-color: var(--liberty); /* Lighter hover color */
+  }
+
+/* General Section Styling */
+#meet-the-team {
+    padding: 3rem 1.5rem;
+    background-color:var(--cadet-blue); /* Light background color */
+    text-align: center;
+  }
+  
+  .team-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--dark-vanilla); /* Match color palette */
+  }
+  
+  /* Grid Layout */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column count based on available space */
+    gap: 2rem; /* Spacing between grid items */
+    width: 100%; /* Allow full width */
+    max-width: 1200px; /* Limit grid container's max width for alignment */
+    margin: 0 auto; /* Center the grid container */
+    justify-items: center;
+    align-items: stretch; /* Ensures all items stretch to the same height */
+  }
+  
+  /* Individual Team Member Card */
+  .team-member {
+    max-width: 300px;
+    text-align: center;
+    background:var(--dark-vanilla);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px; /* Set a fixed height for all cards */
+    overflow: hidden; /* Prevent content overflow */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Team Member Details */
+  .team-member h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: var(--liberty); /* Use palette color */
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #6B6B6B;
+  }
+  
+  .team-member .bio {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #8B7FAC; /* Subtle text color for bio */
+  }
