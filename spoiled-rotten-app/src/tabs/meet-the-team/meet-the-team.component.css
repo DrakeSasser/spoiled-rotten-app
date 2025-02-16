@@ -1,0 +1,70 @@
+/* General Section Styling */
+#meet-the-team {
+    padding: 3rem 1.5rem;
+    background-color:var(--cadet-blue); /* Light background color */
+    text-align: center;
+  }
+  
+  .team-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--liberty); /* Match color palette */
+  }
+  
+  /* Grid Layout */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column count based on available space */
+    gap: 2rem; /* Spacing between grid items */
+    width: 100%; /* Allow full width */
+    max-width: 1200px; /* Limit grid container's max width for alignment */
+    margin: 0 auto; /* Center the grid container */
+    justify-items: center;
+    align-items: stretch; /* Ensures all items stretch to the same height */
+  }
+  
+  /* Individual Team Member Card */
+  .team-member {
+    max-width: 300px;
+    text-align: center;
+    background:var(--pink-limestone);
+    padding: 2.0rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px; /* Set a fixed height for all cards */
+    overflow: hidden; /* Prevent content overflow */
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Profile Image */
+  .profile-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Team Member Details */
+  .team-member h3 {
+    font-size: 1.50rem;
+    margin: 0.5rem 0;
+    color: var(--liberty);
+  }
+  
+  .team-member p {
+    font-size: 1.25rem;
+    color: var(--liberty);
+  }
+  
+  .team-member .bio {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: var(--liberty);
+  }

@@ -1,0 +1,82 @@
+   .contact-container {
+    display: flex;
+    flex-direction: row; /* Ensures children are placed in a row */
+    justify-content: space-between; /* Creates space between columns */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 2rem; /* Adds spacing between the two columns */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-info,
+  .contact-form {
+    flex: 1 1 50%; /* Ensure equal width for both columns */
+    max-width: 50%; /* Limit the width of each column */
+    padding: 1rem;
+    background: var(--pink-limestone);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info h2,
+  .contact-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .contact-info p {
+    margin: 0.5rem 0;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    max-width: 92%; /* Limit the width of each column */
+  }
+  
+  label {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color:var(--liberty);
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--dark-navy);
+    color: var(--pink-limestone);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--liberty);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+      }
+    
+      .contact-info,
+      .contact-form {
+        flex: 1 1 100%; /* Each section takes full width on smaller screens */
+        max-width: 100%;
+      }
+  }

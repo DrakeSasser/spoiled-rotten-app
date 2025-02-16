@@ -1,6 +1,29 @@
-<h1>Meet The Team</h1>
-<div *ngFor="let member of teamMembers" class="team-member">
-  <h2>{{ member.name }}</h2>
-  <p>{{ member.role }}</p>
-  <p>{{ member.bio }}</p>
+<div class="team-container">
+  <h2>Meet the Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="./BecaAndBrisket.jpg" alt="Team Member 1" class="profile-image" />
+      <h3>Rebecca</h3>
+      <p>Owner</p>
+      <p class="bio">
+        Been in the industry 10 years. Master Groomer 9000. Fear-Free and ServSafe certified.
+      </p>
+    </div>
+    <div class="team-member">
+      <img src="./DrakeAndBriskets.jpg" alt="Team Member 2" class="profile-image" />
+      <h3>Drake</h3>
+      <p>CDO</p>
+      <p class="bio">
+        Been in the industry 0 years. Novice Groomer 0001. Fearful of dogs and no longer ServSafe Certified
+      </p>
+    </div>
+    <div class="team-member">
+      <img src="./TurkeyBrisket.jpg" alt="Team Member 3" class="profile-image" />
+      <h3>Brisket</h3>
+      <p>Head of Security</p>
+      <p class="bio">
+        2 years of security expertise under his belt. 11 Months seizure free.
+      </p>
+    </div>
+  </div>
 </div>

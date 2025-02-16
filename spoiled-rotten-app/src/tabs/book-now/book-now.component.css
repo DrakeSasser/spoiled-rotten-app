@@ -1,0 +1,16 @@
+.book-now-btn {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: var(--pink-limestone);
+    background-color: var(--dark-navy);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-now-btn:hover {
+    background-color: var(--liberty); /* Lighter hover color */
+  }

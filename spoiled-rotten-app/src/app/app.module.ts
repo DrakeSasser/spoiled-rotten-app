@@ -5,7 +5,6 @@ import { AppComponent } from "./app.component";
 import { AboutComponent } from "../tabs/about/about.component";
 import { MeetTheTeamComponent } from "../tabs/meet-the-team/meet-the-team.component";
 import { ContactComponent } from "../tabs/contact/contact.component";
-import { HomeTabContainerComponent } from "../tabs/home-tab-container/home-tab-container.component";
 
 @NgModule({
     imports: [

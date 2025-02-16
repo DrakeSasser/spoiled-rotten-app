@@ -1,13 +1,30 @@
-<h1>Contact Us</h1>
-<p>Email: contact&#64;ourbusiness.com</p>
-<p>Phone: +1 (555) 555-5555</p>
+<h2>Contact Us</h2>
+<div class="contact-container">
+  <!-- Left Column: Contact Info -->
+  <div class="contact-info">
+    <p><strong>Phone:</strong> (256) 872-0305</p>
+    <p><strong>Email:</strong> beca&#64;spoiledrottenresort.com</p>
+    <p><strong>Address:</strong> 1902 Rainbow Drive, Gadsden, AL, 35901</p>
+    <p><strong>Hours:</strong> Mon-Fri, 9 AM - 5 PM</p>
+  </div>
 
-<form (ngSubmit)="sendEmail()" #contactForm="ngForm">
-  <label for="email">Your Email:</label>
-  <input type="email" id="email" name="email" ngModel required>
-
-  <label for="message">Your Message:</label>
-  <textarea id="message" name="message" ngModel required></textarea>
-
-  <button type="submit" [disabled]="!contactForm.valid">Send</button>
-</form>
+  <!-- Right Column: Contact Form -->
+  <div class="contact-form">
+    <h2>Email Us</h2>
+    <form action="https://formsubmit.co/beca@spoiledrottenresort.com" method="POST">
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col">
+            <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col">
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+    </form>
+</div>

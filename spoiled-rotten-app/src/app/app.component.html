@@ -1,99 +1,35 @@
-<!-- <div class="home-link">
-  <a routerLink="/">
-    <img src="assets/small-icon.png" alt="Home" class="home-icon" />
-  </a>
-</div>
-<h1 class="page-title" >Spoiled Rotten Pet Resort and Spa</h1>
-<home-tab-container></home-tab-container>
-<router-outlet></router-outlet> -->
 <nav class="navbar">
   <div class="logo-container">
     <img src="./middling-small-icon.png" alt="Logo" class="logo" (click)="scrollToTop()" />
+    <span class="navbar-title">Spoiled Rotten Pet Resort</span>
   </div>
   <ul class="nav-links">
     <li><button (click)="scrollToSection('about')">About</button></li>
     <li><button (click)="scrollToSection('book-now')">Book Now</button></li>
     <li><button (click)="scrollToSection('meet-the-team')">Meet The Team</button></li>
     <li><button (click)="scrollToSection('faq')">FAQ</button></li>
-    <li><button (click)="scrollToSection('contact-us')">Contact Us</button></li>
+    <li><button (click)="scrollToSection('contact')">Contact Us</button></li>
   </ul>
 </nav>
 
 <div class="content">
   <section id="about">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About Us</h2>
-        <p>
-          Here's the deal we are the best there is. Plain and simple. We wake up in the morning and we piss excellence.
-        </p>
-      </div>
-      <div class="about-image-container">
-        <img src="./BrisketAtRestaurant.jpg" alt="About Us Image" class="about-image" />
-      </div>
-    </div>
+    <app-about></app-about>
   </section>
 
   <section id="book-now">
-    <div class="book-now-content">
-      <div class="store-hours">
-        <h3>Opening Hours</h3>
-        <ul>
-          <li><span>Monday:</span> 8 AM - 8 PM</li>
-          <li><span>Tuesday:</span> 8 AM - 8 PM</li>
-          <li><span>Wednesday:</span> 8 AM - 8 PM</li>
-          <li><span>Thursday:</span> 8 AM - 8 PM</li>
-          <li><span>Friday:</span> 8 AM - 8 PM</li>
-          <li><span>Saturday:</span> 8 AM - 4 PM</li>
-          <li><span>Sunday:</span> Closed</li>
-        </ul>
-      </div>
-    </div>
-    <p>These hours are for walk-in services only. Appointments are required for grooming and boarding.</p>
-    <p>Appointment availability can be viewed when by booking your appointment below.</p>
-    <button class="book-now-btn">Book Your Appointment</button>
-  
+    <app-book-now></app-book-now>
   </section>
 
   <section id="meet-the-team">
-    <div class="team-container">
-      <h2>Meet the Team</h2>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="./BecaAndBrisket.jpg" alt="Team Member 1" class="profile-image" />
-          <h3>Rebecca</h3>
-          <p>Owner</p>
-          <p class="bio">
-            Been in the industry 10 years. Master Groomer 9000. Fear-Free and ServSafe certified.
-          </p>
-        </div>
-        <div class="team-member">
-          <img src="./DrakeAndBriskets.jpg" alt="Team Member 2" class="profile-image" />
-          <h3>Drake</h3>
-          <p>CDO</p>
-          <p class="bio">
-            Been in the industry 0 years. Novice Groomer 0001. Fearful of dogs and no longer ServSafe Certified
-          </p>
-        </div>
-        <div class="team-member">
-          <img src="./TurkeyBrisket.jpg" alt="Team Member 3" class="profile-image" />
-          <h3>Brisket</h3>
-          <p>Head of Security</p>
-          <p class="bio">
-            2 years of security expertise under his belt. 11 Months seizure free.
-          </p>
-        </div>
-      </div>
-    </div>
+    <app-meet-the-team></app-meet-the-team>
   </section>
 
   <section id="faq">
-    <h1>FAQ</h1>
-    <p>Answer common questions here.</p>
+    <app-faq></app-faq>
   </section>
 
-  <section id="contact-us">
-    <h1>Contact Us</h1>
-    <p>Provide contact details and a form for email inquiries.</p>
+  <section id="contact" class="contact-section">
+    <app-contact></app-contact>
   </section>
 </div>
