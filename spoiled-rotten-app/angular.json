@@ -13,11 +13,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/spoiled-rotten-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "baseHref": "/spoiled-rotten-app/",
-            "deployUrl": "/spoiled-rotten-app/",
+            "baseHref": "/",
+            "deployUrl": "/",
             "polyfills": [
               "zone.js"
             ],
