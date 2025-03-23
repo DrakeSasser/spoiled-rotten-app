@@ -20,12 +20,12 @@ export class FaqComponent {
       answer: 'You can book online using the button on this page or call us at 256-867-5309'
     },
     {
-      question: 'What are your operating hours?',
-      answer: 'Our operating hours are Monday to Friday, 8 AM to 8 PM, and Saturdays 8 AM to 4 PM.'
+      question: 'Do you offer overnight stays?',
+      answer: 'Yes! We offer day-time play-time stays for your dog as well as overnight stays at in our spacious overnight boarding rooms.'
     },
     {
-      question: 'Is my dog ready yet?',
-      answer: 'No.'
+      question: 'When can I drop off and pick up my dog?',
+      answer: 'TBD'
     }
   ];
 
