@@ -78,5 +78,6 @@
       .contact-form {
         flex: 1 1 100%; /* Each section takes full width on smaller screens */
         max-width: 100%;
+        align-self: center;
       }
   }

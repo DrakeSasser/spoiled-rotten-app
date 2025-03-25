@@ -1,5 +1,5 @@
 .faq-container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 2rem;
   }
@@ -18,7 +18,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     width: 120%; /* Matches container width */
-    max-width: 800px; /* Adjust to your preferred fixed size */
+    max-width: 100%; /* Adjust to your preferred fixed size */
     min-height: 4rem; /* Ensures consistent height */
   }
   
@@ -78,4 +78,17 @@
 
   h3 {
     color: var(--pink-limestone);
+  }
+
+  @media (max-width: 768px) { /* Tablet & Mobile */
+    .accordion-item {
+      border: 0.5px solid var(--dark-navy);
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      min-height: 2rem; /* Ensures consistent height */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Small Phones */
+
   }
