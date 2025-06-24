@@ -61,5 +61,11 @@ For more information on using the Angular CLI, including detailed command refere
 ## Deploy
 ```bash
 ng build --configuration production
+```
+Move created browser folder under spoiled-rotten-app main folder
+
+```bash
 npx angular-cli-ghpages --dir=dist/spoiled-rotten-app
 ```
+
+Don't forget to adjust the website url in the settings for pages so it resolves correctly after deployment!
