@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms"
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'contact',
   imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
@@ -27,7 +27,6 @@ export class ContactComponent {
   }
 
   public sendEmail(): void {
-    console.log('Form Submitted!', this.formData);
     this.httpClient.post('https://api.web3forms.com/submit', this.formData).subscribe({
         next: response => console.log('Success:', response),
         error: error => console.error('Error:', error)

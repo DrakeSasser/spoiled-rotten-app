@@ -17,8 +17,8 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    width: 120%; /* Matches container width */
-    max-width: 100%; /* Adjust to your preferred fixed size */
+    width: 100%;
+    max-width: 800px; /* Optional fixed width for consistency */
     min-height: 4rem; /* Ensures consistent height */
   }
   
@@ -72,7 +72,7 @@
   }
 
   h2 {
-    font-size: 32px;
+    font-size: 2.5rem;
     align-items: center;
   }
 

@@ -1,7 +1,7 @@
 .book-now-btn {
-    margin-top: 1.5rem;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    margin-top: 3rem;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
     color: var(--pink-limestone);
     background-color: var(--dark-navy);
     border: none;
@@ -15,71 +15,107 @@
     background-color: var(--liberty); /* Lighter hover color */
   }
 
-  .store-hours {
-    margin-top: 2rem;
+
+  .services-section {
+    padding: 80px 20px;
+    background-color: var(--pink-limestone);
+    color: var(--liberty);
     text-align: center;
   }
   
-  .store-hours h3 {
+  .services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .service-card {
+    background: var(--cadet-blue);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: var(--cadet-blue);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    color: var(--dark-navy);
   }
   
-  .store-hours ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-  
-  .store-hours li {
-    display: flex;
-    justify-content: space-between;
+  .service-card p {
     font-size: 1rem;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .store-hours li span {
-    font-weight: bold;
-    color: #5C634A; /* Optional: Matches your provided palette */
-  }
-  
-  .store-hours li:last-child {
-    border-bottom: none;
-  }
-  
-  .store-hours li span:first-child {
-    color: var(--liberty); /* Optional: Another color from your palette */
+    line-height: 1.5;
+    color: var(--dark-navy);
   }
 
   @media (max-width: 768px) { /* Tablet & Mobile */
-    .store-hours ul {
-      font-size: 0.9rem;
-      max-width: 100%;
-      padding: 0 1rem;
+    .services-grid {
+      grid-template-columns: 1fr; /* Single column */
+    }
+    .services-section h2 {
+      font-size: 2rem;
     }
   
-    .store-hours li {
-      flex-direction: column;
-      text-align: center;
+    .service-card {
+      padding: 1.5rem;
     }
   
-    .store-hours li span {
-      display: block;
-    }
-
-    .team-grid {
-      grid-template-columns: 1fr; /* Stack team members vertically on smaller screens */
+    .service-card h3 {
+      font-size: 1.25rem;
     }
   
-    .team-member {
-      max-width: 90%;
+    .service-card p {
+      font-size: 0.95rem;
+    }
+  
+    .service-icon {
+      width: 50px;
+      height: 50px;
     }
   }
   
   @media (max-width: 480px) { /* Small Phones */
-
+    .services-grid {
+      grid-template-columns: 1fr; /* Single column */
+    }
+    .services-section {
+      padding: 60px 15px;
+    }
+  
+    .service-card {
+      padding: 1rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.1rem;
+    }
+  
+    .service-card p {
+      font-size: 0.9rem;
+    }
+  
+    .service-icon {
+      width: 40px;
+      height: 40px;
+    }
   }

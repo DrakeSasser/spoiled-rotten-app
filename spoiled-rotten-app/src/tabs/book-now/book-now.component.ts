@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-book-now',
+  selector: 'book-now',
   imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './book-now.component.html',
   styleUrl: './book-now.component.css',

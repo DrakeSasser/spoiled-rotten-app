@@ -7,7 +7,7 @@
         <span [class]="isOpen(i) ? 'arrow up' : 'arrow down'"></span>
         </div>
         <div class="accordion-content" [class.active]="isOpen(i)">
-        <h3>{{ faq.answer }}</h3>
+        <h3 [innerHTML]="faq.answer"></h3>
         </div>
     </div>
     </div>

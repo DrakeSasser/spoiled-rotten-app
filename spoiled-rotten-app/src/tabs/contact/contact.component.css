@@ -67,7 +67,52 @@
   button:hover {
     background-color: var(--liberty);
   }
+
+  .store-hours {
+    margin-top: 2rem;
+    text-align: center;
+  }
   
+  .store-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .store-hours ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  
+  .store-hours li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .store-hours li span {
+    font-weight: bold;
+    color: #5C634A; /* Optional: Matches your provided palette */
+  }
+  
+  .store-hours li:last-child {
+    border-bottom: none;
+  }
+  
+  .store-hours li span:first-child {
+    color: var(--liberty); /* Optional: Another color from your palette */
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    align-items: center;
+  }
+
   /* Responsive Design */
   @media (max-width: 768px) {
     .contact-container {
@@ -79,5 +124,20 @@
         flex: 1 1 100%; /* Each section takes full width on smaller screens */
         max-width: 100%;
         align-self: center;
+      }
+
+      .store-hours ul {
+        font-size: 0.9rem;
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+    
+      .store-hours li {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .store-hours li span {
+        display: block;
       }
   }
