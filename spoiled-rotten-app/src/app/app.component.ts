@@ -8,6 +8,7 @@ import { MeetTheTeamComponent } from "../tabs/meet-the-team/meet-the-team.compon
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [FaqComponent, ContactComponent, AboutComponent, BookNowComponent, MeetTheTeamComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

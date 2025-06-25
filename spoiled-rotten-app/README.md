@@ -62,10 +62,10 @@ For more information on using the Angular CLI, including detailed command refere
 ```bash
 ng build --configuration production
 ```
-Move created browser folder under spoiled-rotten-app main folder
+Copy the CNAME folder from the repo root into the create browser folder at dist/spoiled-rotten-app/browser then run
 
 ```bash
-npx angular-cli-ghpages --dir=dist/spoiled-rotten-app
+npx angular-cli-ghpages --dir=dist/spoiled-rotten-app/browser
 ```
 
-Don't forget to adjust the website url in the settings for pages so it resolves correctly after deployment!
+Don't forget to adjust the website url in the repo settings for pages so it resolves correctly after deployment!
