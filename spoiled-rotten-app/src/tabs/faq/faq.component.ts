@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'faq',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatExpansionModule, MatCardModule],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css',
   standalone: true

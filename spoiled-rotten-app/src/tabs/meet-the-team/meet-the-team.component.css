@@ -8,7 +8,7 @@
   .team-container h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: var(--liberty); /* Match color palette */
+    color: var(--dark-navy);
   }
   
   /* Grid Layout */
@@ -27,13 +27,16 @@
   .team-member {
     max-width: 300px;
     text-align: center;
-    background:var(--pink-limestone);
-    padding: 2.0rem;
+    background:var(--cadet-blue);
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 400px; /* Set a fixed height for all cards */
+    height: 450px; /* Increased height to accommodate more text */
     overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .team-member:hover {
@@ -44,29 +47,35 @@
   /* Profile Image */
   .profile-image {
     width: 100%;
-    height: 200px;
-    max-width: 150px;
+    height: 140px;
+    max-width: 120px;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
   }
   
   /* Team Member Details */
   .team-member h3 {
-    font-size: 1.50rem;
-    margin: 0.5rem 0;
-    color: var(--liberty);
+    font-size: 1.3rem;
+    margin: 0.4rem 0;
+    color: var(--dark-navy);
   }
   
   .team-member p {
-    font-size: 1.25rem;
-    color: var(--liberty);
+    font-size: 1.1rem;
+    color: var(--dark-navy);
+    margin: 0.3rem 0;
   }
   
   .team-member .bio {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
-    color: var(--liberty);
+    color: var(--dark-navy);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
   }
 
   @media (max-width: 768px) { /* Tablet & Mobile */
@@ -80,8 +89,11 @@
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 400px; /* Set a fixed height for all cards */
+      height: 450px; /* Match desktop height */
       overflow: hidden; /* Prevent content overflow */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .team-member p {
