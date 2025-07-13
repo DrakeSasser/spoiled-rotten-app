@@ -1,121 +1,213 @@
+/* Mobile-first services design */
+.services-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 16px;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services-header h2 {
+  font-size: 2rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: var(--liberty);
+  opacity: 0.8;
+  margin: 0;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.service-card {
+  background-color: var(--pink-limestone) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  overflow: hidden;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.service-card .mat-card-header {
+  padding: 16px 16px 8px !important;
+}
+
+.service-card .mat-card-content {
+  padding: 0 16px 8px !important;
+}
+
+.service-card .mat-card-actions {
+  padding: 8px 16px 16px !important;
+  margin: 0 !important;
+}
+
+.service-icon-container {
+  background-color: var(--parrot-pink) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+}
+
+.service-icon {
+  color: var(--pink-limestone) !important;
+  font-size: 24px !important;
+}
+
+.service-icon-img {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: contain;
+}
+
+.service-card .mat-card-title {
+  color: var(--dark-navy) !important;
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+  margin: 0 !important;
+}
+
+.service-card .mat-card-content p {
+  color: var(--dark-navy) !important;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.service-card .mat-card-actions button {
+  color: var(--dark-navy) !important;
+  font-weight: 500 !important;
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0 16px;
+}
+
 .book-now-btn {
-    margin-top: 3rem;
-    padding: 2rem 4rem;
-    font-size: 1.5rem;
-    color: var(--pink-limestone);
-    background-color: var(--dark-navy);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-  }
-  
-  .book-now-btn:hover {
-    background-color: var(--liberty); /* Lighter hover color */
-  }
+  padding: 20px 48px !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  background-color: var(--dark-navy) !important;
+  color: var(--pink-limestone) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  min-width: 200px;
+}
 
+.book-now-btn:hover {
+  background-color: var(--liberty) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25) !important;
+}
 
-  .services-section {
-    padding: 80px 20px;
-    background-color: var(--pink-limestone);
-    color: var(--liberty);
-    text-align: center;
-  }
-  
-  .services-section h2 {
+.book-now-btn mat-icon {
+  margin-right: 8px;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) {
+  .services-header h2 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+  }
+  
+  .services-subtitle {
+    font-size: 1.2rem;
   }
   
   .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 2rem;
+    padding: 0 40px;
     max-width: 1200px;
-    margin: 0 auto;
   }
   
   .service-card {
-    background: var(--cadet-blue);
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-    text-align: center;
-    color: var(--cadet-blue);
+    flex: 1;
+    min-width: 300px;
+    max-width: calc(50% - 1rem);
   }
   
-  .service-card:hover {
-    transform: translateY(-5px);
+  .service-card .mat-card-content p {
+    font-size: 1rem;
+  }
+  
+  .book-now-btn {
+    padding: 24px 56px !important;
+    font-size: 1.4rem !important;
+    min-width: 250px;
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 1200px) {
+  .services-header h2 {
+    font-size: 3rem;
+  }
+  
+  .services-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .services-grid {
+    gap: 2.5rem;
+    padding: 0 60px;
+  }
+  
+  .service-card {
+    max-width: calc(33.333% - 1.67rem);
+  }
+  
+  .service-icon-container {
+    width: 72px !important;
+    height: 72px !important;
   }
   
   .service-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
+    font-size: 36px !important;
   }
   
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--dark-navy);
+  .service-icon-img {
+    width: 40px !important;
+    height: 40px !important;
   }
   
-  .service-card p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--dark-navy);
-  }
-
-  @media (max-width: 768px) { /* Tablet & Mobile */
-    .services-grid {
-      grid-template-columns: 1fr; /* Single column */
-    }
-    .services-section h2 {
-      font-size: 2rem;
-    }
-  
-    .service-card {
-      padding: 1.5rem;
-    }
-  
-    .service-card h3 {
-      font-size: 1.25rem;
-    }
-  
-    .service-card p {
-      font-size: 0.95rem;
-    }
-  
-    .service-icon {
-      width: 50px;
-      height: 50px;
-    }
+  .service-card .mat-card-title {
+    font-size: 1.5rem !important;
   }
   
-  @media (max-width: 480px) { /* Small Phones */
-    .services-grid {
-      grid-template-columns: 1fr; /* Single column */
-    }
-    .services-section {
-      padding: 60px 15px;
-    }
-  
-    .service-card {
-      padding: 1rem;
-    }
-  
-    .service-card h3 {
-      font-size: 1.1rem;
-    }
-  
-    .service-card p {
-      font-size: 0.9rem;
-    }
-  
-    .service-icon {
-      width: 40px;
-      height: 40px;
-    }
+  .service-card .mat-card-content p {
+    font-size: 1.05rem;
   }
+  
+  .book-now-btn {
+    padding: 28px 64px !important;
+    font-size: 1.5rem !important;
+    min-width: 300px;
+  }
+}

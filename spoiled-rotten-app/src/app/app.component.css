@@ -1,101 +1,290 @@
-.navbar-title {
-  font-family: 'Glimmer of Light', sans-serif;
-  font-size: 44px;
-  }
+/* Mobile-first design */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 100%;
-  background-color: var(--cadet-blue);
-  padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  overflow-x: hidden;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links button {
-  background: none;
-  border: none;
-  color: var(--pink-limestone);
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-links button:hover {
-  background-color: var(--lavender-purple);
-  border-radius: 5px;
-  color: var(--liberty);
-}
-
-.logo {
-  max-height: 100px;
-  height: auto;
-  width: auto;
-  object-fit: contain;
-  cursor: pointer;
+  background-color: var(--cadet-blue) !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  min-height: 64px;
+  width: 100%;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logo {
+  max-height: 40px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-title {
+  font-family: 'Glimmer of Light', sans-serif;
+  font-size: 18px;
+  color: var(--pink-limestone);
+  white-space: nowrap;
+}
+
+.navbar-title.mobile {
+  font-size: 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Desktop Navigation */
+.nav-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.nav-links button {
+  color: var(--pink-limestone) !important;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.nav-links button:hover {
+  background-color: var(--lavender-purple) !important;
+  color: var(--liberty) !important;
+}
+
+/* Mobile Menu */
+.mobile-menu-button {
+  color: var(--pink-limestone) !important;
+}
+
+.mobile-menu {
+  background-color: var(--cadet-blue) !important;
+  margin-top: 8px;
+}
+
+.mobile-menu .mat-menu-item {
+  color: var(--dark-navy) !important;
+  display: flex;
+  align-items: center;
   gap: 12px;
+  padding: 12px 16px;
+  font-size: 16px;
 }
 
-.content {
-  margin-top: 60px; /* Account for fixed navbar height */
+.mobile-menu .mat-menu-item:hover {
+  background-color: var(--lavender-purple) !important;
+  color: var(--liberty) !important;
 }
 
-  @media (max-width: 768px) { /* Tablet & Mobile */
-    .navbar-title {
-      font-size: 24px;
-      }
-    .navbar {
-      position: static;
-      padding: 0px 0px;
-    }
-    .nav-links button {
-      font-size: 12px;
-      padding: 5px 10px;
-    }
-    .content {
-      margin-top: 0px; /* Account for static navbar height */
-    }
-    .logo {
-      max-height: 40px;
-    }
+.mobile-menu .mat-menu-item mat-icon {
+  color: var(--liberty) !important;
+  margin-right: 0;
+}
+
+.book-menu-item {
+  background-color: var(--dark-navy) !important;
+  color: var(--pink-limestone) !important;
+}
+
+.book-menu-item:hover {
+  background-color: var(--liberty) !important;
+}
+
+.book-menu-item mat-icon {
+  color: var(--pink-limestone) !important;
+}
+
+/* Content Sections */
+section {
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 16px 60px;
+  background: linear-gradient(135deg, var(--pink-limestone) 0%, var(--cadet-blue) 100%);
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-family: 'Glimmer of Light', sans-serif;
+  font-size: 2rem;
+  color: var(--dark-navy);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--liberty);
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cta-button {
+  padding: 12px 24px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.hero-image {
+  max-width: 100%;
+  margin-top: 2rem;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: var(--cadet-blue);
+}
+
+/* Floating Action Button */
+.fab-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--dark-navy) !important;
+  color: var(--pink-limestone) !important;
+  border-radius: 28px !important;
+  padding: 8px 16px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.fab-button mat-icon {
+  margin-right: 4px;
+}
+
+/* Tablet and Desktop responsive */
+@media (min-width: 768px) {
+  .navbar {
+    min-height: 72px;
   }
   
-  @media (max-width: 480px) { /* Small Phones */
-    .navbar-title {
-      font-size: 15px;
-      }
-    .navbar {
-      position: static;
-    }
-    .nav-links button {
-      font-size: 8px;
-      padding: 3px 8px;
-    }
-    .content {
-      margin-top: 0px; /* Account for static navbar height */
-    }
-    .logo {
-      max-height: 30px;
-    }
+  .logo {
+    max-height: 50px;
   }
+  
+  .navbar-title {
+    font-size: 24px;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: none;
+  }
+  
+  .nav-links button {
+    font-size: 16px;
+  }
+  
+  .hero-section {
+    flex-direction: row;
+    text-align: left;
+    padding: 100px 40px;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .hero-image {
+    flex: 1;
+    max-width: 50%;
+    margin-top: 0;
+  }
+  
+  .hero-img {
+    max-width: 400px;
+  }
+  
+  /* Hide fab button on desktop */
+  .fab-button {
+    display: none;
+  }
+}
 
+@media (min-width: 1200px) {
+  .navbar {
+    min-height: 80px;
+  }
+  
+  .logo {
+    max-height: 60px;
+  }
+  
+  .navbar-title {
+    font-size: 28px;
+    overflow: visible;
+    text-overflow: unset;
+    max-width: none;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .hero-img {
+    max-width: 500px;
+  }
+}
+
+/* Fix for content below navbar */
+section:first-child {
+  margin-top: 64px;
+}
+
+@media (max-width: 767px) {
+  section:first-child {
+    margin-top: 56px;
+  }
+}

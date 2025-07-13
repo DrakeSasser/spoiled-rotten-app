@@ -1,53 +1,198 @@
+/* Mobile-first about section design */
+.about-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-header h2 {
+  font-size: 2rem;
+  color: var(--dark-navy);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: var(--liberty);
+  opacity: 0.8;
+  margin: 0;
+}
+
 .about-container {
-    display: flex;
-    flex-wrap: wrap;
+  padding: 0 16px;
+  max-width: 100%;
+}
+
+.about-card {
+  background-color: var(--cadet-blue) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-text {
+  order: 2;
+  text-align: left;
+}
+
+.about-text p {
+  color: var(--dark-navy);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.highlight-text {
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  color: var(--liberty) !important;
+  background: linear-gradient(135deg, var(--pink-limestone), rgba(235, 226, 237, 0.3));
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--liberty);
+}
+
+.signature-text {
+  font-style: italic !important;
+  color: var(--lavender-purple) !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.closing-text {
+  font-weight: 500 !important;
+  text-align: center !important;
+  color: var(--liberty) !important;
+  font-size: 1.1rem !important;
+}
+
+.about-image-container {
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  text-align: center;
+  max-width: 100%;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.image-caption {
+  margin-top: 1rem;
+}
+
+.image-caption p {
+  color: var(--dark-navy) !important;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Tablet layout */
+@media (min-width: 768px) {
+  .about-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about-container {
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-content {
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 3rem;
   }
   
   .about-text {
     flex: 1;
-    min-width: 300px;
-    max-width: 100%;
-    text-align: left;
-    font-size: 22px;
-    background:var(--pink-limestone);
-    padding: 2.0rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Prevent content overflow */
+    order: 1;
+  }
+  
+  .about-text p {
+    font-size: 1.05rem;
+  }
+  
+  .highlight-text {
+    font-size: 1.15rem !important;
   }
   
   .about-image-container {
     flex: 1;
-    min-width: 300px;
-    max-width: 100%;
+    order: 2;
   }
   
   .about-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
   }
+}
 
-  @media (max-width: 768px) { /* Tablet & Mobile */
-    .about-image {
-      width: 90%; /* Reduce the image size on smaller screens */
-    }
-    .about-text {
-      font-size: 15px;
-    }
+/* Desktop layout */
+@media (min-width: 1200px) {
+  .about-header h2 {
+    font-size: 3rem;
   }
   
-  @media (max-width: 480px) { /* Small Phones */
-    .about-image {
-      width: 60%; /* Reduce the image size on smaller screens */
-    }
-    .about-text {
-      font-size: 10px;
-    }
+  .about-subtitle {
+    font-size: 1.3rem;
   }
+  
+  .about-container {
+    padding: 0 60px;
+  }
+  
+  .about-content {
+    gap: 4rem;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+  }
+  
+  .highlight-text {
+    font-size: 1.2rem !important;
+    padding: 1.5rem;
+  }
+  
+  .about-image {
+    max-width: 400px;
+  }
+  
+  .closing-text {
+    font-size: 1.2rem !important;
+  }
+}

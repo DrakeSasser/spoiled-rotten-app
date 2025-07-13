@@ -1,35 +1,112 @@
-<nav class="navbar">
-  <div class="logo-container">
-    <img src="assets/icons/SRFullLogoTransparent.PNG" alt="Logo" class="logo" (click)="scrollToTop()" />
-    <span class="navbar-title">Spoiled Rotten Pet Resort</span>
-  </div>
-  <ul class="nav-links">
-    <li><button (click)="scrollToSection('about')">About</button></li>
-    <li><button (click)="scrollToSection('book-now')">Our Services</button></li>
-    <li><button (click)="scrollToSection('meet-the-team')">Meet The Team</button></li>
-    <li><button (click)="scrollToSection('faq')">FAQ</button></li>
-    <li><button (click)="scrollToSection('contact')">Contact Us</button></li>
-  </ul>
-</nav>
+<div class="app-container">
+  <mat-toolbar color="primary" class="navbar">
+    <div class="logo-container" (click)="scrollToTop()">
+      <img src="assets/icons/SRFullLogoTransparent.PNG" alt="Logo" class="logo" />
+      <span class="navbar-title" [class.mobile]="isHandset$ | async">Spoiled Rotten Pet Resort</span>
+    </div>
+    
+    <span class="spacer"></span>
+    
+    <!-- Desktop Navigation -->
+    <div class="nav-links" *ngIf="(isHandset$ | async) === false">
+      <button mat-button (click)="scrollToSection('about')">About</button>
+      <button mat-button (click)="scrollToSection('book-now')">Our Services</button>
+      <button mat-button (click)="scrollToSection('meet-the-team')">Meet The Team</button>
+      <button mat-button (click)="scrollToSection('faq')">FAQ</button>
+      <button mat-button (click)="scrollToSection('contact')">Contact Us</button>
+      <button mat-raised-button color="primary" class="cta-button" (click)="openBookingLink()">
+        <mat-icon>calendar_today</mat-icon>
+        Book Now
+      </button>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="mobileMenu"
+      *ngIf="isHandset$ | async"
+      class="mobile-menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <!-- Mobile Menu -->
+    <mat-menu #mobileMenu="matMenu" class="mobile-menu">
+      <button mat-menu-item (click)="scrollToSection('about')">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+      <button mat-menu-item (click)="scrollToSection('book-now')">
+        <mat-icon>pets</mat-icon>
+        <span>Our Services</span>
+      </button>
+      <button mat-menu-item (click)="scrollToSection('meet-the-team')">
+        <mat-icon>people</mat-icon>
+        <span>Meet The Team</span>
+      </button>
+      <button mat-menu-item (click)="scrollToSection('faq')">
+        <mat-icon>help</mat-icon>
+        <span>FAQ</span>
+      </button>
+      <button mat-menu-item (click)="scrollToSection('contact')">
+        <mat-icon>contact_mail</mat-icon>
+        <span>Contact Us</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="openBookingLink()" class="book-menu-item">
+        <mat-icon>calendar_today</mat-icon>
+        <span>Book Now</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
 
-<div class="content">
-  <section id="about">
-    <about></about>
-  </section>
-  
-  <section id="book-now">
-    <book-now></book-now>
-  </section>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Welcome to Spoiled Rotten Pet Resort</h1>
+        <p class="hero-subtitle">Premium Indoor Pet Care in Gadsden, Alabama</p>
+        <div class="hero-actions">
+          <button mat-raised-button color="primary" class="cta-button" (click)="openBookingLink()">
+            <mat-icon>calendar_today</mat-icon>
+            Book An Appointment
+          </button>
+          <button mat-raised-button color="primary" class="cta-button" (click)="scrollToSection('book-now')">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div>
+        <img src="assets/icons/SRFullLogoTransparent.PNG" alt="Full logo" class="hero-img">
+      </div>
+    </section>
 
-  <section id="meet-the-team">
-    <app-meet-the-team></app-meet-the-team>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+      <about></about>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="book-now">
+      <book-now></book-now>
+    </section>
 
-  <section id="faq">
-    <faq></faq>
-  </section>
+    <!-- Team Section -->
+    <section id="meet-the-team">
+      <app-meet-the-team></app-meet-the-team>
+    </section>
 
-  <section id="contact" class="contact-section">
-    <contact></contact>
-  </section>
+    <!-- FAQ Section -->
+    <section id="faq">
+      <faq></faq>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <contact></contact>
+    </section>
+
+  <!-- Floating Action Button for Mobile -->
+  <button mat-raised-button class="fab-button" color="primary" (click)="openBookingLink()" *ngIf="isHandset$ | async">
+    <mat-icon>calendar_today</mat-icon>
+    Book
+  </button>
 </div>

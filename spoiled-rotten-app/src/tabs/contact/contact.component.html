@@ -1,50 +1,119 @@
-<h2>Contact Us</h2>
-<div class="contact-container">
-  <!-- Left Column: Contact Info -->
-  <div class="contact-info">
-    <p><strong>Phone:</strong> (256) 872-0305</p>
-    <p><strong>Email:</strong> beca&#64;spoiledrottenresort.com</p>
-    <p><strong>Address:</strong> 1902 Rainbow Drive, Gadsden, AL, 35901</p>
-    <div class="book-now-content">
-      <div class="store-hours">
-        <h3>Opening Hours</h3>
-        <ul>
-          <li><span>Monday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Tuesday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Wednesday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Thursday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Friday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Saturday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Sunday:</span> 8 AM - 8:30 PM</li>
-          <li><span>Closed Daily:</span> 1 PM - 3 PM</li>
-        </ul>
-      </div>
-    </div>
-    <p>These hours are for walk-in services only. Appointments are required for grooming and boarding.</p>
-    <p><a href="https://pawpartner.com/pz/book?p=2174788">Appointment availability can be viewed on when you book your appointment.</a></p>
+<div class="contact-section">
+  <div class="contact-header">
+    <h2>Contact Us</h2>
   </div>
+  
+  <div class="contact-container">
+    <div class="contact-content">
+      <!-- Contact Information Card -->
+      <mat-card class="contact-info-card">
+        <mat-card-header>
+          <mat-card-title>Get in Touch</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-list class="contact-list">
+            <mat-list-item class="contact-item">
+              <mat-icon matListItemIcon class="contact-icon">phone</mat-icon>
+              <div class="contact-info">
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">(256) 872-0305</div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="contact-item">
+              <mat-icon matListItemIcon class="contact-icon">email</mat-icon>
+              <div class="contact-info">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">stay&#64;spoiledrottenresort.com</div>
+              </div>
+            </mat-list-item>
+            <mat-list-item class="contact-item">
+              <mat-icon matListItemIcon class="contact-icon">location_on</mat-icon>
+              <div class="contact-info">
+                <div class="contact-label">Address</div>
+                <div class="contact-value">1902 Rainbow Drive, Gadsden, AL, 35901</div>
+              </div>
+            </mat-list-item>
+          </mat-list>
+          
+          <div class="store-hours">
+            <h3>Opening Hours</h3>
+            <mat-list class="hours-list">
+              <mat-list-item class="hours-item">
+                <div class="hours-info">
+                  <div class="day">Monday - Sunday</div>
+                  <div class="time">8 AM - 8:30 PM</div>
+                </div>
+              </mat-list-item>
+              <mat-list-item class="hours-item">
+                <div class="hours-info">
+                  <div class="day">Closed Daily</div>
+                  <div class="time">1 PM - 3 PM</div>
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          
+          <div class="info-note">
+            <p>These hours are for walk-in services only. Appointments are required for grooming and boarding.</p>
+          </div>
+          
+          <button mat-raised-button color="primary" class="quick-book-btn" onclick="window.open('https://pawpartner.com/pz/book?p=2174788', '_blank')">
+            <mat-icon>calendar_today</mat-icon>
+            Book Appointment
+          </button>
+        </mat-card-content>
+      </mat-card>
 
-  <!-- Right Column: Contact Form -->
-  <div class="contact-form">
-    <h2>Email Us</h2>
-    <form>
-      <div class="form-group">
-        <div class="form-row">
-          <div class="col">
-            <input type="text" name="name" class="form-control" placeholder="Full Name" [(ngModel)]="formData.name" required>
+      <!-- Contact Form Card -->
+      <mat-card class="contact-form-card">
+        <mat-card-header>
+          <mat-card-title>Send Us a Message</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <!-- Success Message -->
+          <div *ngIf="isSubmitted" class="success-message">
+            <mat-icon class="success-icon">check_circle</mat-icon>
+            <h3>Thank you for messaging us! We will respond as soon as possible!</h3>
+            <p>We appreciate you reaching out to Spoiled Rotten Pet Resort.</p>
           </div>
-          <div class="col">
-            <input type="email" name="email" class="form-control" placeholder="Email Address"  [(ngModel)]="formData.email" required>
-          </div>
-          <div class="col">
-            <input type="email" name="email" class="form-control" placeholder="Phone Number"  [(ngModel)]="formData.phone">
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <textarea placeholder="Your Message" class="form-control" name="message" rows="10" [(ngModel)]="formData.message" required></textarea>
-      </div>
-      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-      <button type="submit" class="btn btn-lg btn-dark btn-block" (click)="sendEmail()">Send</button>
-    </form>
+          
+          <!-- Contact Form -->
+          <form *ngIf="!isSubmitted" class="contact-form">
+            <div class="form-fields">
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Full Name</mat-label>
+                <input matInput type="text" name="name" [(ngModel)]="formData.name" required>
+                <mat-icon matSuffix>person</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Email Address</mat-label>
+                <input matInput type="email" name="email" [(ngModel)]="formData.email" required>
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="tel" name="phone" [(ngModel)]="formData.phone">
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+              
+              <mat-form-field appearance="fill" class="form-field message-field">
+                <mat-label>Your Message</mat-label>
+                <textarea matInput name="message" rows="4" [(ngModel)]="formData.message" required placeholder="Tell us about your pet's needs..."></textarea>
+                <mat-icon matSuffix>message</mat-icon>
+              </mat-form-field>
+            </div>
+            
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <button mat-raised-button color="primary" type="submit" (click)="sendEmail()" class="send-button" [disabled]="isLoading">
+              <mat-spinner *ngIf="isLoading" diameter="20" class="button-spinner"></mat-spinner>
+              <mat-icon *ngIf="!isLoading">send</mat-icon>
+              {{ isLoading ? 'Sending...' : 'Send Message' }}
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>
