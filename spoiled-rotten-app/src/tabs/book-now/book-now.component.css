@@ -40,7 +40,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   overflow: hidden;
-  width: 100%;
+  width: 90%;
 }
 
 .service-card:hover {
