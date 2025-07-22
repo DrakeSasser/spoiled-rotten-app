@@ -37,7 +37,8 @@
 }
 
 .contact-info-card,
-.contact-form-card {
+.contact-form-card,
+.facebook-card {
   background-color: var(--cadet-blue) !important;
   border-radius: 16px !important;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1) !important;
@@ -48,15 +49,27 @@
   flex-direction: column;
 }
 
+.facebook-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facebook-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
 .contact-info-card .mat-card-title,
-.contact-form-card .mat-card-title {
+.contact-form-card .mat-card-title,
+.facebook-card .mat-card-title {
   color: var(--dark-navy) !important;
   font-weight: 600 !important;
   font-size: 1.3rem !important;
 }
 
 .contact-info-card .mat-card-content,
-.contact-form-card .mat-card-content {
+.contact-form-card .mat-card-content,
+.facebook-card .mat-card-content {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -299,7 +312,85 @@
   font-size: 1rem;
 }
 
-/* Tablet layout */
+/* Facebook Card Styles */
+.facebook-icon {
+  margin-right: 8px !important;
+  color: #1877F2 !important;
+}
+
+.facebook-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.latest-post h3 {
+  color: var(--liberty) !important;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.facebook-page-plugin {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--pink-limestone);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-page-plugin .fb-page {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-page-plugin .fb-page > span {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+.facebook-page-plugin iframe {
+  width: 100% !important;
+  border-radius: 4px;
+}
+
+.post-preview {
+  color: var(--dark-navy) !important;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.latest-post {
+  text-align: center;
+}
+
+.facebook-btn {
+  width: 100%;
+  padding: 12px !important;
+  font-weight: 600 !important;
+  background-color: var(--dark-navy) !important;
+  color: white !important;
+  margin-top: auto;
+}
+
+.facebook-btn:hover {
+  background-color: var(--liberty) !important;
+}
+
+.facebook-btn mat-icon {
+  margin-right: 8px;
+  color: white !important;
+}
+
+/* Tablet layout - 2 columns */
 @media (min-width: 768px) {
   .contact-header h2 {
     font-size: 2.5rem;
@@ -311,35 +402,38 @@
   
   .contact-container {
     padding: 0 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
   }
   
   .contact-content {
-    flex-direction: row;
-    gap: 3rem;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
   }
   
   .contact-info-card,
-  .contact-form-card {
+  .contact-form-card,
+  .facebook-card {
     flex: 1;
     min-width: 0;
   }
   
   .contact-info-card .mat-card-title,
-  .contact-form-card .mat-card-title {
+  .contact-form-card .mat-card-title,
+  .facebook-card .mat-card-title {
     font-size: 1.4rem !important;
   }
   
   .quick-book-btn,
-  .send-button {
+  .send-button,
+  .facebook-btn {
     width: auto;
     min-width: 200px;
   }
 }
 
-/* Desktop layout */
+/* Large Desktop layout - 3 columns */
 @media (min-width: 1200px) {
   .contact-header h2 {
     font-size: 3rem;
@@ -351,14 +445,27 @@
   
   .contact-container {
     padding: 0 60px;
+    max-width: 1600px;
   }
   
   .contact-content {
-    gap: 4rem;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: center;
+  }
+  
+  .contact-info-card,
+  .contact-form-card,
+  .facebook-card {
+    flex: 1;
+    min-width: 350px;
+    max-width: 450px;
   }
   
   .contact-info-card .mat-card-title,
-  .contact-form-card .mat-card-title {
+  .contact-form-card .mat-card-title,
+  .facebook-card .mat-card-title {
     font-size: 1.5rem !important;
   }
   
@@ -372,5 +479,12 @@
   
   .store-hours h3 {
     font-size: 1.2rem;
+  }
+  
+  .quick-book-btn,
+  .send-button,
+  .facebook-btn {
+    width: 100%;
+    min-width: unset;
   }
 }

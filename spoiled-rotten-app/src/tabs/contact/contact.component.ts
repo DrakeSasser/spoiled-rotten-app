@@ -62,4 +62,8 @@ export class ContactComponent {
               this.formData.email && 
               this.formData.message);
   }
+
+  public openFacebookPage(): void {
+    window.open('https://www.facebook.com/SpoiledRottenResort', '_blank');
+  }
 }
