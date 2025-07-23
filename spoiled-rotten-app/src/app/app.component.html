@@ -10,10 +10,10 @@
     <!-- Desktop Navigation -->
     <div class="nav-links" *ngIf="(isHandset$ | async) === false">
       <button mat-button (click)="scrollToSection('about')">About</button>
-      <button mat-button (click)="scrollToSection('book-now')">Our Services</button>
-      <button mat-button (click)="scrollToSection('meet-the-team')">Meet The Team</button>
+      <button mat-button (click)="scrollToSection('book-now')">Services</button>
+      <button mat-button (click)="scrollToSection('meet-the-team')">Team</button>
       <button mat-button (click)="scrollToSection('faq')">FAQ</button>
-      <button mat-button (click)="scrollToSection('contact')">Contact Us</button>
+      <button mat-button (click)="scrollToSection('contact')">Connect</button>
       <button mat-raised-button color="primary" class="cta-button" (click)="openBookingLink()">
         <mat-icon>calendar_today</mat-icon>
         Book Now
@@ -37,11 +37,11 @@
       </button>
       <button mat-menu-item (click)="scrollToSection('book-now')">
         <mat-icon>pets</mat-icon>
-        <span>Our Services</span>
+        <span>Services</span>
       </button>
       <button mat-menu-item (click)="scrollToSection('meet-the-team')">
         <mat-icon>people</mat-icon>
-        <span>Meet The Team</span>
+        <span>Team</span>
       </button>
       <button mat-menu-item (click)="scrollToSection('faq')">
         <mat-icon>help</mat-icon>
@@ -49,7 +49,7 @@
       </button>
       <button mat-menu-item (click)="scrollToSection('contact')">
         <mat-icon>contact_mail</mat-icon>
-        <span>Contact Us</span>
+        <span>Connect</span>
       </button>
       <mat-divider></mat-divider>
       <button mat-menu-item (click)="openBookingLink()" class="book-menu-item">
