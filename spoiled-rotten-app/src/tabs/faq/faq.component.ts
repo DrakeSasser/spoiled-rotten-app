@@ -32,7 +32,7 @@ export class FaqComponent {
     },
     {
       question: 'When can I drop off and pick up my dog?',
-      answer: 'Boarding checkout is between 8:30 am and 12:00pm. A daycare charge of $15 will be added for a pick up after 12pm. Any pet pick-up or drop-off that does not occur during our regular business hours must be arranged by appointment. A $25 service charge will also be added to your guest invoice for appointment-based pickup.'
+      answer: 'Boarding checkout is between 8:30 am and 11:30 am. A late checkout fee of $15 will be added for a pick up after 11:30 am. Any pet pick-up or drop-off that does not occur during our regular business hours must be arranged by appointment. A $25 service charge will also be added to your guest invoice for appointment-based pickup.'
     },
     {
       question: 'Will my pet have potty issues if they are going inside during boarding?',
